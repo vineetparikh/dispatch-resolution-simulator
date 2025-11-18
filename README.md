@@ -7,7 +7,7 @@ This is deployed on Github Pages, but if you'd like to run it yourself:
 - clone the repo via `git clone`
 - cd into the repo and `npm install` all the dependencies (this uses React + Vite and some other libraries to help with simulating the polygon)
 - `npm run dev` to get a local dev instance running
-- To deploy
+- GH Pages should be building from main, so if you want to deploy then just push to main. Please don't do this without PRs though.
 
 ## Why I made this (TODO: to expand)
 

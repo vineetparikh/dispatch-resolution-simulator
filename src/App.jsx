@@ -402,23 +402,24 @@ const App = () => {
             )}
           </div>
 
-          {/* Design Rationale Dropdown */}
+          {/* Why I Made This Dropdown */}
           <div className="mb-4 border border-slate-200 rounded-lg">
             <button
               onClick={() => setShowRationale(!showRationale)}
               className="w-full flex items-center justify-between p-4 text-left hover:bg-slate-50 transition-colors"
             >
-              <span className="font-semibold text-slate-700">Design Rationale</span>
+              <span className="font-semibold text-slate-700">Why I made this</span>
               {showRationale ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </button>
             {showRationale && (
               <div className="p-4 pt-0 text-slate-600 text-sm space-y-2">
-                <p><strong>Visual feedback:</strong> The polygon visualization makes it immediately clear how well-suited a character is for a task. Larger overlaps = better chances.</p>
-                <p><strong>Meaningful choices:</strong> The auto-fail mechanic prevents "max everything" strategies and forces players to consider trade-offs in character development.</p>
-                <p><strong>Tension and drama:</strong> The ball physics create suspense - even with high success chances, players watch nervously as the ball bounces, making each resolution feel important.</p>
-                <p><strong>Multi-attribute complexity:</strong> Unlike simple pass/fail checks, this system rewards well-rounded characters while still allowing specialists to shine in their domains.</p>
-                <p><strong>Tunability:</strong> The physics parameters let you adjust the "feel" of resolutions - more bounces and randomness = more chaos; less = more predictable outcomes.</p>
-                <p><strong>Inspired by Dispatch:</strong> This mechanic simulates the elegant resolution system from the video game Dispatch, adapted for flexibility and experimentation.</p>
+                <p>I basically binged Dispatch over the course of a week after the whole season released, and I really liked the stuff everyone liked (the animation, story, characters, voice acting, Telltale choice-based gameplay, dispatch gameplay, etc). However, I also liked one mechanic that I think is a bit underrated: how typical dispatches are "resolved" based on character vs task stats: the bouncing ball.</p>
+                <p>IMO, the "bouncing ball check" (draw a shape for the task, draw a shape for player skills, and bounce a ball) has <strong>so many</strong> implications in RPG design that elevate it above other resolution mechanics like dX+bonus or dice pools, while keeping the same principles of randomness in the underlying chances + build expression by steering that randomness.</p>
+                <p>For example: challenges/tasks can be made to act multi-attribute almost immediately, and skill points in a particular task could be distributed across the attributes to shore up weaknesses</p>
+                <p>The system can even model stats using the very physics of the bouncing ball: maybe a lucky character has a ball that moves very slowly so it rarely moves out of center.</p>
+                <p>Character synergies (and lack thereof) can even be expressed by adding together individual attributes much like how Dispatch does them, and concepts like "advantage/disadvantage" or situational boosts/nerfs can involve adding more balls or running a check multiple times with the same initial inputs</p>
+                <p>Finally, the "auto-bonus"/"auto-fail" sections also help add more than just the physics, though I wonder if another cool idea is to add bumpers like a pinball game</p>
+                <p>I looked around and didn't see anything online that replicated this nor did I see this mechanic in other games (though I might just be msising something, so please let me know if there is one!), so I quickly coded up an online simulator based on my singular playthrough of the game which can also work. It's not perfect, but I'd appreciate feedback and I'm hopeful that maybe we'll see this resolution system in more RPGs in the future (maybe even the CritRole game?)</p>
               </div>
             )}
           </div>
